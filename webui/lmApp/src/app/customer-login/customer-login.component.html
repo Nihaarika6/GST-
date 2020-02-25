@@ -1,0 +1,53 @@
+<!-- 
+  <p>customer-login</p>
+  <form method="post">
+    User Name : 
+    <input type="text" color="red" name="userName" [(ngModel)]="userName"placeholder="Enter your Username" /> <br/><br/> 
+    Password : 
+    <input type="password" name="passWord" [(ngModel)]="passWord" placeholder="Enter your Password" /> <br/><br/> 
+    <input type="button" value="Login" (click)="validate()" />
+    <input type="reset">
+</form>
+<p *ngIf="count > 1">
+        
+    <b>Invalid Credentials...</b>
+   
+</p> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vendor Login</title>
+</head>
+
+        <body> 
+            <h1>Customer Login</h1> 
+            <p class="time">
+                    <iframe src="http://free.timeanddate.com/clock/i758i9yt/n553/tt0/tw0/tm1/tb4" frameborder="0" width="87" height="34"></iframe>
+            </p>             
+            <form method="post">
+                <span style="background-color: black">&nbsp;User Name</span>&nbsp;&nbsp;&nbsp; -&nbsp;&nbsp;&nbsp;
+                
+                <input type="text" class="inputt" name="userName" [(ngModel)]="userName" placeholder="Please enter username" required="required" /> <br/><br/> 
+                <span style="background-color: black">&nbsp;Password&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    -&nbsp;&nbsp;&nbsp;   
+                <input class="inputt" placeholder="Please enter password" required="required" [type]="show ? 'text' : 'passWord'" name="passWord" [(ngModel)]="passWord" />
+                <!-- <input type="password" class="inputt" name="passWord" [(ngModel)]="passWord" placeholder="Please enter password" required="required" /> <br/><br/> 
+             &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  -->
+                
+                <br>
+                <input type="checkbox" (click)="password()">Show Password<br>
+                <input type="button" value="Login" (click)="validate()"  class="button button2">
+                <input type="reset"class="button button2"/>
+            </form>
+           
+            <p *ngIf="count > 1">
+                <b>Invalid Credentials...</b>
+            </p>
+
+        </body>
+        
+        
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+
+
+    <body>
+        <h2> Customer Order History </h2>
+    
+                <input
+                type="text"
+                class="form-control"
+                name="searchString"
+                placeholder="Type to search..."
+                [(ngModel)]="searchString"
+            />
+        <table border="30">
+            <tr>
+                <th>ORDER ID</th>
+                <th>ORDER DATE</th>
+                <th>ORDER AMOUNT</th>
+                <th>ORDER STATUS</th>
+                <th>ORDER QUANTITY</th>
+                <th>CUSTOMER ID</th>
+                <th>FOOD ID</th>
+                <th>VENDOR ID</th>
+                <th>WALLET TYPE</th>
+                <th>ORDER COMMENTS</th>
+                <!-- <th>CANCEL ORDER</th> -->
+                </tr>
+            <!-- <tr *ngFor="let u of orders | async"> -->
+                <tr *ngFor="let u of orders | async | customFilter :  {orderId: searchString, orderComments:searchString, walletType:searchString,orderQuantity:searchString,orderTotalamount:searchString,orderStatus:searchString}; let i = index">
+                
+                    <td>{{u.orderId}}</td>
+                    <td>{{u.orderDate}}</td>
+                    <td>{{u.orderTotalamount}}</td>
+                    <!-- <td>{{u.orderStatus}}</td>  -->
+                    <div *ngIf="u.orderStatus === 'ACCEPTED'" [ngStyle]="{'background-color': 'green'}">{{u.orderStatus}}</div>
+                    <!-- [ngStyle]="{'background-color': 'green'}"></div> -->
+                   <div *ngIf="u.orderStatus === 'REJECTED'" [ngStyle]="{'background-color': 'red'}">{{u.orderStatus}}</div>
+                   <div *ngIf="u.orderStatus === 'PENDING' "[ngStyle]="{'background-color': 'yellow'}">{{u.orderStatus}}</div>
+                    <td>{{u.orderQuantity}}</td> 
+                    <td>{{u.customerId}}</td>
+                    <td>{{u.menuId}}</td>
+                    <td>{{u.vendorId}}</td>
+                    <td>{{u.walletType}}</td> 
+                    <td>{{u.orderComments}}</td> 
+            
+                </tr>
+        </table>
+    </body>
+<html>
+
+  

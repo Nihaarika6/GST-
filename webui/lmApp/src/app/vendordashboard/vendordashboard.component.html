@@ -1,0 +1,28 @@
+<body>
+ <div class="a">
+<h2>Welcome {{userName}}&nbsp;<span style='font-size:20px;'>&#9829;</span></h2>
+</div>
+<p align="right">
+<button [routerLink]="['/index',
+{outlets: {'data': ['logOut']}}]"class="button button2" ><i>LogOut</i></button> &nbsp;&nbsp;&nbsp;&nbsp;</p>
+<app-vendorinfo></app-vendorinfo>
+
+<pre>
+    <button  [routerLink]="['/vendordashboard',
+{outlets: {'data': ['vendororderhistory']}}]" class="button button2">Vendor Order History</button> &nbsp;&nbsp;&nbsp;&nbsp;<span style='font-size:100px;'>&#9786;</span><button  [routerLink]="['/vendordashboard',
+{outlets: {'data': ['vendorpendingorder']}}]" class="button button2">Vendor Pending Orders</button> &nbsp;&nbsp;&nbsp;&nbsp;<span style='font-size:100px;'>&#9786;</span><button  [routerLink]="['/vendordashboard',
+{outlets: {'data': ['vendoracceptorreject']}}]" class="button button2">Accept or Reject</button> &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+</pre>
+ 
+ <br>
+ <br><br>
+ <router-outlet name='data'></router-outlet>
+</body>
+ <!-- <app-vendorinfo></app-vendorinfo>
+<hr/>
+<br/>
+<app-vendororderhistory></app-vendororderhistory>
+<app-venpendingorder></app-venpendingorder>
+<app-vendoracceptorreject></app-vendoracceptorreject> -->

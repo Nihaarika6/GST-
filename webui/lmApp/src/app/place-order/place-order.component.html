@@ -1,0 +1,42 @@
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Place-Order</p>
+
+<form name="placeOrder">
+    <pre>
+    <span style="font-family:Arial">Customer Id : </span> 
+    <input type="number" name ="customerId"  min="100" max="105" [(ngModel)]="model.customerId" />  <br/> <br/> <br/> 
+    <span style="font-family:Arial">Select Menu Item </span>
+    <select [(ngModel)]="menu.menuItem" name="menuItem" (change)="showAmount()">
+        <option *ngFor="let e of menuList | async" value={{e.menuId}}>
+            {{e.menuItem}}
+        </option>
+    </select> <br/><br/>
+    <span style="font-family:Arial">Price : </span> 
+    <input type="number" name="price" [(ngModel)]="price" readonly /> <br/><br/>
+    <span style="font-family:Arial">Select Vendor </span>  
+    <select [(ngModel)]="vendor.vendorName" name="vendorName">
+        <option *ngFor="let f of vendorList | async" value={{f.vendorId}}>
+            {{f.vendorName}}
+        </option>
+    </select> <br/><br/>
+    <span style="font-family:Arial">Order Date : </span>
+    <input type="date" [(ngModel)]="model.orderDate" name="orderDate" /> <br/><br/>
+    <span style="font-family:Arial">Quantity of Order : </span>
+    <input type="number" [(ngModel)]="model.orderQuantity" name="orderQuantity" min="1"/> <br/><br/> 
+    <span style="font-family:Arial">Select Wallet Type : </span>   
+    <select [(ngModel)]="wallet.walletType" name="walletType">
+        <option *ngFor="let f of walletList | async" value={{f.walletType}}>
+            {{f.walletType}}
+        </option>
+    </select> <br/><br/>
+    <span style="font-family:Arial">Order Comments : </span>
+    <input type="text" [(ngModel)]="model.orderComments" name="orderComments" /> <br/><br/> 
+    <input class="button button2" type="button" value="Place Order" (click)="placeOrder()" /> <h2>{{result}} </h2>     <input class="button button2" type="button" value="QR Code" (click)="qrGenerate()" />   
+     </pre>   <br/><br/> 
+</form>
+<!-- <app-customer-cancel-order></app-customer-cancel-order> -->
+<!-- <script>
+function myFunction() {
+  alert("Hello\nHow are you?");<br/><br/> 
+}
+</script> --><!-- <input type="button" value="Place Order" (click)="placeOrder()" />   <br/><br/> 
+    {{result}} -->

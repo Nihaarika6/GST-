@@ -1,0 +1,35 @@
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cancel-Order</p>
+
+
+<!-- <style> 
+        input[type=text] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          box-sizing: border-box;
+          border: none;
+          background-color: #3CBC8D;
+          color: white;
+        }
+</style> -->
+
+<form>
+  <pre>
+Customer Id:
+<input type = "number" class="input" name = "customerId" min="100" max="105" [(ngModel)]= "customerId"/><br/><br/>
+Order Id:
+<input type = "number" class="input" name = "orderId" min="1" [(ngModel)]= "orderId"/><br/><br/>
+YES OR NO:
+<input type = "text" class="input" name = "status" [(ngModel)]= "status"/><br/><br/>
+
+<!-- <input type="search" list="mylist" [(ngModel)]= "status"> -->
+<!-- <select [(ngModel)]="status" name="status"><option *ngFor="let e of List | async" value={{e.status}}>{{e.status}}</option></select> -->
+                                   <input type = "button" value = "CancelOrder" class="button button2" (click)="cancel()"/><br/><br/>
+{{result}}
+</pre>
+</form>
+<!-- <select [(ngModel)]="menu.menuItem" name="menuItem" (change)="showAmount()">
+  <option *ngFor="let e of menuList | async" value={{e.menuId}}>
+      {{e.menuItem}}
+  </option>
+</select> -->

@@ -1,0 +1,48 @@
+<body>
+        <h2> Vendor Pending Orders</h2>
+                <input
+                type="text"
+                class="form-control"
+                name="searchString"
+                placeholder="Type to search..."
+                [(ngModel)]="searchString"
+              />
+<table border="35">
+        <tr>
+            <th>ORDER ID</th>
+            <th>CUSTOMER ID</th>
+            <th>VENDOR ID</th>
+            <th>MENU ID</th>
+            <th>ORDER STATUS</th>
+            <th>ORDER COMMENTS</th>
+            <th>ORDER TOTALAMOUNT</th>
+            <th>ORDER DATE</th>
+            <th>ORDER QUANTITY</th>
+            <th>WALLET TYPE</th>
+            <th>ACCEPT OR REJECT</th>
+            <th>SELECT</th>
+
+        </tr>
+        <!-- <tr *ngFor="let o of orders | async"> -->
+                <tr *ngFor="let o of orders | async | customFilter :  {orderId: searchString, orderComments:searchString, walletType:searchString,orderQuantity:searchString}; let i = index">
+            <td>{{o.orderId}}</td>
+            <td>{{o.customerId}}</td>
+            <td>{{o.vendorId}}</td>
+            <td>{{o.menuId}}</td>
+            <!-- <td>{{o.orderStatus}}</td>  -->
+            <div [ngStyle]="{'background-color':o.orderStatus === 'PENDING' ? 'yellow' : 'green' }">{{o.orderStatus}}</div>
+            <td>{{o.orderComments}}</td> 
+            <td>{{o.orderTotalamount}}</td>
+            <td>{{o.orderDate}}</td>
+            <td>{{o.orderQuantity}}</td>
+            <td>{{o.walletType}}</td> 
+            <td><input type ="button" class="button button2"value="Accept Or Reject" (click)="acceptOrReject(o.orderId, o.vendorId)"/></td>
+            <td>
+                    <input type="checkbox" name="checkOrdId" (change)="checkIfAllSelected(o.orderId)">
+                    {{o.orderId}}
+                </td>
+        </tr>
+    </table>
+    
+    <input type="button" class="button button2"value="Accept All" (click)="AcceptMe()" />
+</body>

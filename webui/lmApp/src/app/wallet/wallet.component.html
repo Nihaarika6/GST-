@@ -1,0 +1,18 @@
+<body>
+<table border="20">
+        <tr>
+            <th>WALLET ID</th>
+            <th>WALLET TYPE</th>
+            <th>WALLET AMOUNT</th>
+            <th>CUSTOMER ID</th>
+          
+            </tr>
+        <tr *ngFor="let u of wallet | async">
+            <td>{{u.walletId}}</td>
+            <td class="a">{{u.walletType}}</td>
+            <td>{{u.walletAmount}}</td>
+            <td>{{u.customerId}}</td> 
+          
+        </tr>
+    </table>
+</body>

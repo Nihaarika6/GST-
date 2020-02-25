@@ -1,0 +1,22 @@
+body  {
+    background-image: url(https://www.picclickimg.com/d/w1600/pict/182716709864_/Photo-Studio-Prop-8x12ft-Vinyl-Plain-Cement-Wall.jpg);
+    background-size:cover;
+    font-weight: bolder;
+}
+.button {
+    background-color:rgb(241, 19, 19);
+    border: none;
+    color: rgb(210, 214, 182);
+    padding: 5px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+  .button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  } 

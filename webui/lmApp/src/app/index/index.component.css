@@ -1,0 +1,92 @@
+ 
+p{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 1px #ff0000;
+
+    
+}
+imgg:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+} 
+
+ @keyframes shake {
+ 0% { transform: translate(1px, 1px) rotate(0deg); }
+ 10% { transform: translate(-1px, -2px) rotate(-1deg); }
+ 20% { transform: translate(-3px, 0px) rotate(1deg); }
+ 30% { transform: translate(3px, 2px) rotate(0deg); }
+ 40% { transform: translate(1px, -1px) rotate(1deg); }
+ 50% { transform: translate(-1px, 2px) rotate(-1deg); }
+ 60% { transform: translate(-3px, 1px) rotate(0deg); }
+ 70% { transform: translate(3px, 1px) rotate(-1deg); }
+ 80% { transform: translate(-1px, -1px) rotate(1deg); }
+ 90% { transform: translate(1px, 2px) rotate(0deg); }
+ 100% { transform: translate(1px, -2px) rotate(-1deg); }
+} 
+
+.card.card.highlight-card span {
+    margin-left: 60px;
+  
+  }
+
+  a{
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 1px #ff0000;
+    font-size: larger;
+  }
+ 
+  .bodyy {
+    background: rgba(211, 214, 11, 0.76), 255, 255);
+    font-family : 'Graduate';
+  }
+
+  ::selection {
+      background: #8e44ad;
+      text-shadow: none;
+  }
+
+  h1 {
+    position: relative;
+    top: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 60px;
+    color: #e67e22;
+    text-shadow: 2px 2px 3px #000;
+  }
+
+
+  .h11 {
+    --color1: #d1d1d6;
+    --color2: #ff0a0a;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    font-size: 46px;
+    background: repeating-linear-gradient(
+      45deg,
+      var(--color1),
+      var(--color1) 30px,
+      var(--color2) 30px,
+      var(--color2) 60px
+    );
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    animation: 40s linear 0s infinite move;
+  }
+  
+  @keyframes move {
+    from {
+      background-position: 0px;
+    }
+    to {
+      background-position: 1000px;
+    }
+  }
+  
+
+
+
+

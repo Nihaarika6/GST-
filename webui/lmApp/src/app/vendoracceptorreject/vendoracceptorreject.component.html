@@ -1,0 +1,20 @@
+<body>
+<form>
+<pre class="abc">
+    
+    VENDOR ID          
+    <input type="number" name="vendId" [(ngModel)]="vendId" /> <br/><br/> 
+    ORDER ID           
+    <input type="number" name="orderId" [(ngModel)]="orderId" /> <br/><br/> 
+    ACCEPTED OR REJECTED   
+    <input type="text" name="status" placeholder="ACCEPTED OR REJECTED" [(ngModel)]="status" /> <br/><br/> 
+</pre>
+<pre>
+<div class="abc">
+    <input type="button" class="button button2" value="Accept or Reject Order" (click)="acceptOrReject()" /> <br/><br/>
+    {{result}}
+</div>
+</pre>
+</form>
+</body>
+<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->

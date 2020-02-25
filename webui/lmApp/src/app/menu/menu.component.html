@@ -1,0 +1,32 @@
+<table border="3">
+        <tr>
+            <th>Menu ID</th>
+            <th>Menu Name</th>
+            <th>Menu Price</th>
+            <th>Menu Details</th>
+            <th>Menu Status</th>
+            <th>Menu Rating</th>
+        </tr>
+        <tr *ngFor="let u of menu | async">
+            <td>{{u.menuId}}</td>
+            <td>{{u.menuName}}</td>
+            <td>{{u.menuPrice}}</td>
+            <td>{{u.menuDetails}}</td>
+            <td>{{u.menuStatus}}</td>
+            <td>{{u.menuRating}}</td>
+        </tr>
+    </table>
+    <br/><br/>
+    Enter Menu ID :
+    <input type="number" name="menuId" [(ngModel)]="menuId" /> <br/>
+    <br/><br/>
+    <input type="button" name="Show" value="Show" (click)="show()" />
+    <br/><br/>
+    Menu Name: {{(menu1 | async)?.menuName}}
+    <br/><br/>
+    Price: {{(menu1 | async)?.menuPrice}}
+    <br/><br/>
+    Details: {{(menu1 | async)?.menuDetails}}
+    <br/><br/>
+    Menu Status: {{(menu1 | async)?.menuStatus}}
+    

@@ -1,0 +1,10 @@
+table  {
+    /* background-image: url(https://cdn.pixabay.com/photo/2012/03/04/00/01/background-21717__340.jpg); */
+    background-size:cover;
+    background-color:rgb(245, 67, 67);
+}
+tr:nth-child(even){background-color: azure}
+
+body{
+    /* background-image: url(https://cdn.pixabay.com/photo/2012/03/04/00/01/background-21717__340.jpg); */
+}

@@ -1,0 +1,53 @@
+
+<div style="position: relative; left: 0; top: 0;">
+        <!-- <img src="img/fishes.png" class="fishes"/> -->
+        <!-- <img src="https://image.freepik.com/free-photo/summer-healthy-snack-mexican-style-tortilla-sandwich-wraps-assorted-colorful-fresh-vegetable-sticks-celery-rhubarb-pepper-cucumber-carrot-with-yoghurt-sauce-dip-light-blue-background_136595-2983.jpg" /> -->
+    </div>
+<body class=intro>
+    <h3>
+<marquee behavior="alternate" BGCOLOR=red> Welcome {{userName}} </marquee>
+</h3>
+<p class="right "><button class="button button2" [routerLink]="['/index',
+    {outlets: {'data': ['logOut']}}]"><b>LogOut</b></button>
+</p>
+
+
+<app-customer-info></app-customer-info> 
+
+
+<hr/><br/><br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button [routerLink]="['/dashBoard',
+{outlets: {'data': ['placeOrder']}}]" class="button button2">Place Order</button> &nbsp;&nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button [routerLink]="['/dashBoard',
+{outlets: {'data': ['customerOrderHistory']}}]" class="button button2">Customer Order History</button> &nbsp;&nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button [routerLink]="['/dashBoard',
+{outlets: {'data': ['customerpendingorder']}}]" class="button button2">Customer PendingOrder</button> &nbsp;&nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button [routerLink]="['/dashBoard',
+{outlets: {'data': ['wallet']}}]" class="button button2">Wallet</button> &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button [routerLink]="['/dashBoard',
+{outlets: {'data': ['customerCancelOrder']}}]" class="button button2">Cancel Order</button> &nbsp;&nbsp;&nbsp;&nbsp; -->
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+ <hr/><br/><br/>
+
+ <router-outlet name='data'></router-outlet>
+</body>
+<br>
+<br><br><br><br><br><br><br><br><br>
+
+
+
+<!-- <hr/>
+<br/> 
+
+<app-customer-order-history></app-customer-order-history>
+<app-wallet></app-wallet> -->
+<!-- <app-place-order></app-place-order>
+<app-customer-cancel-order></app-customer-cancel-order> -->

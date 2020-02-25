@@ -1,0 +1,32 @@
+<table border="3">
+        <tr>
+            <th>Vendor ID</th>
+            <th>Vendor Name</th>
+            <th>Vendor UserName</th>
+            <th>Vendor Email</th>
+            <th>Vendor Mobile</th>
+            <th>Vendor Address</th>
+        </tr>
+        <tr *ngFor="let u of vendor | async">
+            <td>{{u.vendorId}}</td>
+            <td>{{u.vendorName}}</td>
+            <td>{{u.vendorUserName}}</td>
+            <td>{{u.vendorEmail}}</td>
+            <td>{{u.vendorNumber}}</td>
+            <td>{{u.vendorPassword}}</td>
+        </tr>
+    </table>
+    <br/><br/>
+    <!-- Enter Menu ID :
+    <input type="number" name="menId" [(ngModel)]="menId" /> <br/>
+    <br/><br/>
+    <input type="button" name="Show" value="Show" (click)="show()" />
+    <br/><br/>
+    Menu Name: {{(menu1 | async)?.menName}}
+    <br/><br/>
+    Price: {{(menu1 | async)?.menPrice}}
+    <br/><br/>
+    Details: {{(menu1 | async)?.menDetails}}
+    <br/><br/>
+    Menu Status: {{(menu1 | async)?.menStatus}} -->
+    
